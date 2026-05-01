@@ -18,31 +18,47 @@
 	</properties>
 	<dependencies>
 		<dependency>
+			<!-- Integra o Spring Data JPA com Hibernate para persistência
+			de dados, permitindo usar repositórios e mapear entidades em 
+			tabelas do banco de dados com mínima configuração. -->
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		<dependency>
+			<!--  Fornece tudo o necessário para construir uma API REST: 
+			Spring MVC, Tomcat embutido, serialização JSON com Jackson, etc. -->
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
 		<dependency>
+			<!--  spring-boot-devtools — Ferramenta de desenvolvimento que ha-
+			bilita reinício automático da aplicação ao detectar mudanças no có-
+			digo, agilizando o ciclo de desenvolvimento. Não vai para produção 
+			(scope runtime + optional). -->
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
+			<!--   Banco de dados em memória usado normalmente para testes ou de-
+			senvolvimento local. Não requer instalação externa; os dados são per-
+			didos ao encerrar a aplicação. -->
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
+			<!--   Driver JDBC oficial do MySQL, necessário para que a aplicação se
+			conecte a um banco de dados MySQL em ambientes de staging ou produção. -->
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
+			<!--   Suite de testes que inclui JUnit 5, Mockito e Spring Test. Disponível
+			apenas durante a execução dos testes (scope test). -->
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
